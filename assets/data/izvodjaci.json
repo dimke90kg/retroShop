@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "ime": "Abba",
+        "ime": "Abba"
         
     },
     {
@@ -11,8 +11,8 @@
     },
     {
         "id": 3,
-        "ime": "Bts",
-    }
+        "ime": "Bts"
+    },
     {
         "id": 4,
         "ime": "Dua",
@@ -27,7 +27,7 @@
         "id": 6,
         "ime": "Justin",
         "prezime": "Biber"
-    }
+    },
     {
         "id": 7,
         "ime": "Manu",
@@ -40,9 +40,8 @@
     },
     {
         "id": 9,
-        "ime": "Đango",
-        
-    }
+        "ime": "Đango"   
+    },
     {
         "id": 10,
         "ime": "Dondald",
@@ -57,7 +56,7 @@
         "id": 12,
         "ime": "James",
         "prezime": "Last"
-    }
+    },
     {
         "id": 13,
         "ime": "Jose",
@@ -72,22 +71,19 @@
         "id": 15,
         "ime": "Nina",
         "prezime": "Simone"
-    }
+    },
     {
         "id": 16,
-        "ime": "Seal",
-        
+        "ime": "Seal"
     },
     {
         "id": 17,
-        "ime": "Ac-Dc",
-        
+        "ime": "Ac-Dc"
     },
     {
         "id": 18,
-        "ime": "B.B. King",
-        
-    }
+        "ime": "B.B. King"
+    },
     {
         "id": 19,
         "ime": "Bob",
@@ -102,7 +98,7 @@
         "id": 21,
         "ime": "Johnny",
         "prezime": "Winter"
-    }
+    },
     {
         "id":22,
         "ime": "Led",
@@ -115,12 +111,11 @@
     },
     {
         "id": 24,
-        "ime": "Santana",
-    }
+        "ime": "Santana"
+    },
     {
         "id": 25,
-        "ime": "The Rolling Stonse",
-       
+        "ime": "The Rolling Stonse"
     },
     {
         "id": 26,
@@ -131,7 +126,7 @@
         "id": 27,
         "ime": "Bob",
         "prezime": "Dylan"
-    }
+    },
     {
         "id": 28,
         "ime": "Charles",
@@ -146,7 +141,7 @@
         "id": 30,
         "ime": "Juliette",
         "prezime": "Greco"
-    }
+    },
     {
         "id": 31,
         "ime": "Nana",
@@ -161,7 +156,7 @@
         "id": 33,
         "ime": "Arsen",
         "prezime": "Dedić"
-    }
+    },
     {
         "id": 34,
         "ime": "Bisera",
@@ -176,7 +171,7 @@
         "id": 36,
         "ime": "Danica",
         "prezime": "Krstić"
-    }
+    },
     {
         "id": 37,
         "ime": "Kico",
@@ -191,7 +186,7 @@
         "id": 39,
         "ime": "Petko",
         "prezime": "Katrandžijev"
-    }
+    },
     {
         "id": 40,
         "ime": "Šaban",
