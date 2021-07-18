@@ -1,0 +1,211 @@
+[
+    {
+        "id": 1,
+        "ime": "Abba",
+        
+    },
+    {
+        "id": 2,
+        "ime": "Ariana",
+        "prezime": "Grande"
+    },
+    {
+        "id": 3,
+        "ime": "Bts",
+    }
+    {
+        "id": 4,
+        "ime": "Dua",
+        "prezime": "Lipa"
+    },
+    {
+        "id": 5,
+        "ime": "Enrique",
+        "prezime": "Iglesias"
+    },
+    {
+        "id": 6,
+        "ime": "Justin",
+        "prezime": "Biber"
+    }
+    {
+        "id": 7,
+        "ime": "Manu",
+        "prezime": "Chao"
+    },
+    {
+        "id": 8,
+        "ime": "Taylor",
+        "prezime": "Swift"
+    },
+    {
+        "id": 9,
+        "ime": "Đango",
+        
+    }
+    {
+        "id": 10,
+        "ime": "Dondald",
+        "prezime": "Byrd"
+    },
+    {
+        "id": 11,
+        "ime": "Frank",
+        "prezime": "Zappa"
+    },
+    {
+        "id": 12,
+        "ime": "James",
+        "prezime": "Last"
+    }
+    {
+        "id": 13,
+        "ime": "Jose",
+        "prezime": "James"
+    },
+    {
+        "id": 14,
+        "ime": "Miles",
+        "prezime": "Davis"
+    },
+    {
+        "id": 15,
+        "ime": "Nina",
+        "prezime": "Simone"
+    }
+    {
+        "id": 16,
+        "ime": "Seal",
+        
+    },
+    {
+        "id": 17,
+        "ime": "Ac-Dc",
+        
+    },
+    {
+        "id": 18,
+        "ime": "B.B. King",
+        
+    }
+    {
+        "id": 19,
+        "ime": "Bob",
+        "prezime": "Dylan"
+    },
+    {
+        "id": 20,
+        "ime": "Eric",
+        "prezime": "Clapton"
+    },
+    {
+        "id": 21,
+        "ime": "Johnny",
+        "prezime": "Winter"
+    }
+    {
+        "id":22,
+        "ime": "Led",
+        "prezime": "Zeppelin"
+    },
+    {
+        "id": 23,
+        "ime": "Richar",
+        "prezime": "Bona"
+    },
+    {
+        "id": 24,
+        "ime": "Santana",
+    }
+    {
+        "id": 25,
+        "ime": "The Rolling Stonse",
+       
+    },
+    {
+        "id": 26,
+        "ime": "Roy",
+        "prezime": "Black"
+    },
+    {
+        "id": 27,
+        "ime": "Bob",
+        "prezime": "Dylan"
+    }
+    {
+        "id": 28,
+        "ime": "Charles",
+        "prezime": "Aznavour"
+    },
+    {
+        "id": 29,
+        "ime": "Frank",
+        "prezime": "Sinatra"
+    },
+    {
+        "id": 30,
+        "ime": "Juliette",
+        "prezime": "Greco"
+    }
+    {
+        "id": 31,
+        "ime": "Nana",
+        "prezime": "Muskouri"
+    },
+    {
+        "id": 32,
+        "ime": "Serge",
+        "prezime": "Gainsbourge"
+    },
+    {
+        "id": 33,
+        "ime": "Arsen",
+        "prezime": "Dedić"
+    }
+    {
+        "id": 34,
+        "ime": "Bisera",
+        "prezime": "Veletanlić"
+    },
+    {
+        "id": 35,
+        "ime": "Bora",
+        "prezime": "Dugić"
+    },
+    {
+        "id": 36,
+        "ime": "Danica",
+        "prezime": "Krstić"
+    }
+    {
+        "id": 37,
+        "ime": "Kico",
+        "prezime": "Slabinac"
+    },
+    {
+        "id": 38,
+        "ime": "Mišo",
+        "prezime": "Kovač"
+    },
+    {
+        "id": 39,
+        "ime": "Petko",
+        "prezime": "Katrandžijev"
+    }
+    {
+        "id": 40,
+        "ime": "Šaban",
+        "prezime": "Bajramović"
+    },
+    {
+        "id": 41,
+        "ime": "Slavko",
+        "prezime": "Banjac"
+    },
+    {
+        "id": 42,
+        "ime": "Zvonko",
+        "prezime": "Bogdan"
+    }
+    
+]

@@ -1,0 +1,511 @@
+[
+    {
+        "id": 1,
+        "naslov": "The Movie",
+        "izvodjacID" : 1,
+        "kategorija" : [1],
+        "cena":1500,
+        "naStanju": true,
+        "slika": {
+			"src": "abba.jpg",
+			"alt": "The Movie"
+		}
+    },
+    {
+        "id": 2,
+        "naslov": "Yours Truly",
+        "izvodjacID" : 2,
+        "kategorija" : [1],
+        "cena":1399,
+        "naStanju": true,
+        "slika": {
+			"src": "ariana-grande2.jpg",
+			"alt": "Yours Truly"
+		}
+    },
+    {
+        "id": 3,
+        "naslov": "Danger",
+        "izvodjacID" : 3,
+        "kategorija" : [1],
+        "cena": 1899,
+        "naStanju": false,
+        "slika": {
+			"src": "bts.jpg",
+			"alt": "Danger"
+		}
+    },
+   {
+        "id": 4,
+        "naslov": "Future Nostalgia (The Moonlight Edition)",
+        "izvodjacID" : 4,
+        "kategorija" : [1],
+        "cena": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "dua-lipa.jpg",
+			"alt": "Future Nostalgia (The Moonlight Edition)"
+		}
+    },
+    {
+        "id": 5,
+        "naslov": "Greatest Hits",
+        "izvodjacID" : 5,
+        "kategorija" : [1],
+        "cena":1899,
+        "naStanju": true,
+        "slika": {
+			"src": "enrique-iglesias.jpg",
+			"alt": "Greatest Hits"
+		}
+    },
+    {
+        "id": 6,
+        "naslov": "Believe",
+        "izvodjacID" : 6,
+        "kategorija" : [1],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "justin-biber.jpg",
+			"alt": "Believe"
+		}
+    },
+    {
+        "id": 7,
+        "naslov": "Clandestion",
+        "izvodjacID" : 7,
+        "kategorija" : [1],
+        "cena": 1699,
+        "naStanju": true,
+        "slika": {
+			"src": "manu-chao.jpg",
+			"alt": "Clandestion"
+		}
+    },
+    {
+        "id": 8,
+        "naslov": "Lover",
+        "izvodjacID" : 8,
+        "kategorija" : [1],
+        "cena": 1399,
+        "naStanju": true,
+        "slika": {
+			"src": "knjiga8.jpg",
+			"alt": "Lover"
+		}
+    },
+    {
+        "id": 9,
+        "naslov": "Modern jazz quartet",
+        "izvodjacID" : 9,
+        "kategorija" : [2],
+        "price": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "django.jpg",
+			"alt": "Modern jazz quartet"
+		}
+    },
+	
+    {
+        "id": 10,
+        "naslov": "The cat walk",
+        "izvodjacID" : 10,
+        "kategorija" : [2],
+        "cena":1500,
+        "naStanju": true,
+        "slika": {
+			"src": "donaldbyrd.jpg",
+			"alt": "The cat walk"
+		}
+    },
+    {
+        "id": 11,
+        "naslov": "The dub room special",
+        "izvodjacID" : 11,
+        "kategorija" : [2],
+        "cena":1399,
+        "naStanju": true,
+        "slika": {
+			"src": "frank-zappa.jpg",
+			"alt": "The dub room special"
+		}
+    },
+    {
+        "id": 12,
+        "naslov": "Non stop dancing",
+        "izvodjacID" : 12,
+        "kategorija" : [2],
+        "cena": 1899,
+        "naStanju": false,
+        "slika": {
+			"src": "james-last.jpg",
+			"alt": "Non stop dancing"
+		}
+    },
+   {
+        "id": 13,
+        "naslov": "Lean on me",
+        "izvodjacID" : 13,
+        "kategorija" : [2],
+        "cena": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "jose-james.jpg",
+			"alt": "Lean on me"
+		}
+    },
+    {
+        "id": 14,
+        "naslov": "Ahead",
+        "izvodjacID" : 14,
+        "kategorija" : [2],
+        "cena":1199,
+        "naStanju": true,
+        "slika": {
+			"src": "miles-davis.jpg",
+			"alt": "Ahead"
+		}
+    },
+    {
+        "id": 15,
+        "naslov": "Fodder on my wings",
+        "izvodjacID" : 15,
+        "kategorija" : [2],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "nina-simone.jpg",
+			"alt": "Fodder on my wings"
+		}
+    },
+    {
+        "id": 16,
+        "naslov": "Standards",
+        "izvodjacID" : 16,
+        "kategorija" : [2],
+        "cena": 1699,
+        "naStanju": true,
+        "slika": {
+			"src": "seal.jpg",
+			"alt": "Standards"
+		}
+    },
+    {
+        "id": 17,
+        "naslov": "Rock or Bust",
+        "izvodjacID" : 17,
+        "kategorija" : [3],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "ac-dc.jpg",
+			"alt": "Rock or Bust"
+		}
+    },
+    {
+        "id": 18,
+        "naslov": "Live at the BBC",
+        "izvodjacID" : 18,
+        "kategorija" : [3],
+        "price": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "bb-king.jpg",
+			"alt": "Live at the BBC"
+		}
+    },
+	{
+        "id": 19,
+        "naslov": "Royal Albert hall 1966 concert",
+        "izvodjacID" : 19,
+        "kategorija" : [3],
+        "cena":1500,
+        "naStanju": true,
+        "slika": {
+			"src": "bob-dylan-koncert.jpg",
+			"alt": "Royal Albert hall 1966 concert"
+		}
+    },
+    {
+        "id": 20,
+        "naslov": "Happy",
+        "izvodjacID" : 20,
+        "kategorija" : [3],
+        "cena":1399,
+        "naStanju": true,
+        "slika": {
+			"src": "eric-clapton.jpg",
+			"alt": "Happy"
+		}
+    },
+    {
+        "id": 21,
+        "naslov": "The Best Of",
+        "izvodjacID" : 21,
+        "kategorija" : [3],
+        "cena": 1099,
+        "naStanju": false,
+        "slika": {
+			"src": "johnny-winter.jpg",
+			"alt": "The Best Of"
+		}
+    },
+   {
+        "id": 22,
+        "naslov": "Led Zeppelin",
+        "izvodjacID" : 22,
+        "kategorija" : [3],
+        "cena": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "led-zeppelin.jpg",
+			"alt": "Led Zeppelin"
+		}
+    },
+    {
+        "id": 23,
+        "naslov": "The Ten Shades Of Blues",
+        "izvodjacID" : 23,
+        "kategorija" : [3],
+        "cena":1899,
+        "naStanju": true,
+        "slika": {
+			"src": "richar-bona.jpg",
+			"alt": "The Ten Shades Of Blues"
+		}
+    },
+    {
+        "id": 24,
+        "naslov": "Supernatural",
+        "izvodjacID" : 24,
+        "kategorija" : [3],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "santana.jpg",
+			"alt": "Supernatural"
+		}
+    },
+    {
+        "id": 25,
+        "naslov": "Let In Bleed",
+        "izvodjacID" : 25,
+        "kategorija" : [3],
+        "cena": 1699,
+        "naStanju": true,
+        "slika": {
+			"src": "the-rolling-stonse.jpg",
+			"alt": "Let In Bleed"
+		}
+    },
+    {
+        "id": 26,
+        "naslov": "Best Of Roy Black",
+        "izvodjacID" : 26,
+        "kategorija" : [4],
+        "cena": 1399,
+        "naStanju": true,
+        "slika": {
+			"src": "best-of-roy-black.jpg",
+			"alt": "Best Of Roy Black"
+		}
+    },
+    {
+        "id": 27,
+        "naslov": "Bob Dylan",
+        "izvodjacID" : 27,
+        "kategorija" : [4],
+        "price": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "bob-dylan.jpg",
+			"alt": "Bob Dylan"
+		}
+    },
+	
+    {
+        "id": 28,
+        "naslov": "Duos",
+        "izvodjacID" : 28,
+        "kategorija" : [4],
+        "cena":1500,
+        "naStanju": true,
+        "slika": {
+			"src": "charles-aznavour.jpg",
+			"alt": "Duos"
+		}
+    },
+    {
+        "id": 29,
+        "naslov": "Frank Sinatra Originals",
+        "izvodjacID" : 29,
+        "kategorija" : [4],
+        "cena":1399,
+        "naStanju": true,
+        "slika": {
+			"src": "frank-sinatra-originals.jpg",
+			"alt": "Frank Sinatra Originals"
+		}
+    },
+    {
+        "id": 30,
+        "naslov": "Merci",
+        "izvodjacID" : 30,
+        "kategorija" : [4],
+        "cena": 1199,
+        "naStanju": false,
+        "slika": {
+			"src": "juliette-greco.jpg",
+			"alt": "Merci"
+		}
+    },
+   {
+        "id": 31,
+        "naslov": "Originale Album Box",
+        "izvodjacID" : 31,
+        "kategorija" : [4],
+        "cena": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "nana-muskouri.jpg",
+			"alt": "Originale Album Box"
+		}
+    },
+    {
+        "id": 32,
+        "naslov": "Hit Box",
+        "izvodjacID" : 32,
+        "kategorija" : [4],
+        "cena":1199,
+        "naStanju": true,
+        "slika": {
+			"src": "serge-gainsbourge.jpg",
+			"alt": "Hit Box"
+		}
+    },
+    {
+        "id": 33,
+        "naslov": "Herbar",
+        "izvodjacID" : 33,
+        "kategorija" : [5],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "arsen-dedic.jpg",
+			"alt": "Herbar"
+		}
+    },
+    {
+        "id": 34,
+        "naslov": "Najveći Hitovi I Festivalske Pesme",
+        "izvodjacID" : 34,
+        "kategorija" : [5],
+        "cena": 1699,
+        "naStanju": true,
+        "slika": {
+			"src": "bisera-veletanlic.jpg",
+			"alt": "Najveći Hitovi I Festivalske Pesme"
+		}
+    },
+    {
+        "id": 35,
+        "naslov": "Simfonija duha i daha",
+        "izvodjacID" : 35,
+        "kategorija" : [5],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "bora-dugic.jpg",
+			"alt": "Simfonija duha i daha"
+		}
+    },
+    {
+        "id": 36,
+        "naslov": "Pod gorom se šetalo devojče",
+        "izvodjacID" : 36,
+        "kategorija" : [5],
+        "price": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "danica-krstic.jpg",
+			"alt": "Pod gorom se šetalo devojče"
+		}
+    },
+	{
+        "id": 37,
+        "naslov": "Cvijet Čežnje",
+        "izvodjacID" : 37,
+        "kategorija" : [5],
+        "cena": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "krunoslav-kico-slabinac.jpg",
+			"alt": "Cvijet Čežnje
+
+			"
+		}
+    },
+    {
+        "id": 38,
+        "naslov": "Rane godine",
+        "izvodjacID" : 38,
+        "kategorija" : [5],
+        "cena":1199,
+        "naStanju": true,
+        "slika": {
+			"src": "miso-kovac.jpg",
+			"alt": "Rane godine"
+		}
+    },
+    {
+        "id": 39,
+        "naslov": "Jutro Će Promijeniti Sve - Gold Collection",
+        "izvodjacID" : 39,
+        "kategorija" : [5],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "petko-kantardzijev-milinacc.jpg",
+			"alt": "Jutro Će Promijeniti Sve - Gold Collection"
+		}
+    },
+    {
+        "id": 40,
+        "naslov": "Gypsy Songs",
+        "izvodjacID" : 40,
+        "kategorija" : [5],
+        "cena": 1699,
+        "naStanju": true,
+        "slika": {
+			"src": "saban-bajramovic.jpg",
+			"alt": "Gypsy Songs"
+		}
+    },
+    {
+        "id": 41,
+        "naslov": "Ljubav Kao Odgovor",
+        "izvodjacID" : 41,
+        "kategorija" : [5],
+        "cena": 1599,
+        "naStanju": true,
+        "slika": {
+			"src": "slavko-banjac.jpg",
+			"alt": "Ljubav Kao Odgovor"
+		}
+    },
+    {
+        "id": 42,
+        "naslov": "Tko Te Ima, Taj Te Nema",
+        "izvodjacID" : 42,
+        "kategorija" : [5],
+        "price": 1299,
+        "naStanju": true,
+        "slika": {
+			"src": "zvonko-bogdan.jpg",
+			"alt": "Tko Te Ima, Taj Te Nema"
+		}
+    }
+
+]

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Shop</title>
+    <!--Ucitan css-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+     <!--Ucitan BS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="wrapper">
+        <!--logo sajta-->
+        <div id="upper-part">
+      <div id="site-title">
+        <img
+          src="assets//img/slike-za-sajt/retro-shop-logo.jpg"
+          id="retro"
+          width="300"
+          alt="cover photo"
+        />
+      </div>
+      <!--pretraga,korpa,logovanje-->
+      <div id="logBasket">
+        <div class="search-products">
+          <input  type="search" id="searchProducts" placeholder="Pretraži proizvod . . ." >
+        </div> 
+          <a href="basket"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"></a>
+          <a href="logIn.html"> <img class="img-logIn" src="assets/img/slike-za-sajt/img-logIn.png" alt="log in"></a>
+      </div>
+      <!--navigacija-->
+      <div id="nab-bar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Retro Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#wrapper">Početna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O nama</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-me">Kontakt</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Kategorije
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li><a class="dropdown-item" href="#">Pop</a></li>
+                  <li><a class="dropdown-item" href="#">Jazz</a></li>
+                  <li><a class="dropdown-item" href="#">Bluz</a></li>
+                  <li><a class="dropdown-item" href="#">Evergreen</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Domaći izvođači</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+    <div id="coverImg">
+        <img class="coverImgSt" src="assets/img/slike-za-sajt/drugaaaaa.jpg" alt="naslovna-slika">
+    </div>
+    <!--pretraga po ceni i kategoriji-->
+    <div id="filter-searchHiden">
+      <form>
+        <fieldset>
+          <select class="custom-select1" id="sort1">
+            <option value="asc" selected>Cene rastuce</option>
+            <option value="desc">Cene opadajuce</option>
+          </select>
+          <select class="custom-select2" id="sortcategory">
+            <option value="kategorija" selected>Kategorija</option>
+            <option value="pop">Pop</option>
+            <option value="jezz">Jazz</option>
+            <option value="bluz">Bluz</option>
+            <option value="evergreen">Evergreen</option>
+            <option value="domaci-izvodjaci">Domaći izvođači</option>
+          </select>
+        </fieldset>
+      </form>
+
+    </div>
+    <div id="filter-search">
+      
+        <form>
+          <fieldset>
+            <select class="custom-select" id="sort">
+              <option value="asc" selected>Cene rastuce</option>
+              <option value="desc">Cene opadajuce</option>
+            </select><br>
+            <label for="price-range" id="cene">Cena</label><br>
+            <input type="range" name="cena" id="price-range" min="0" max="100"><br>
+            <label>Kategorije</label><br>
+            <input type="checkbox" id="chech-pop" name="check-pop" value="pop">
+            <label for="chech-pop">Pop</label><br>
+            <input type="checkbox" id="chech-jazz" name="check-jazz" value="jazz">
+            <label for="chech-jazz" >Jazz</label><br>
+            <input type="checkbox" id="chech-bluz" name="check-bluz" value="bluz">
+            <label for="chech-bluz">Bluz</label><br>
+            <input type="checkbox" id="chech-evergreen" name="check-evergreen" value="evergreen">
+            <label for="chech-evergreen">Evergreen</label><br>
+            <input type="checkbox" id="chech-domaci" name="check-domaci" value="domaci">
+            <label for="chech-domaci">Domaći izvođači</label><br>
+          </fieldset>
+        </form>
+
+      </div>
+    <!--Proizvodi koji se ucitavaju pri ucitavanju stranice ,pre upotrebe filtera i logovanja ,vide ih svi korisnici -->
+  
+    <div id="products">
+      <div class="card" style="width: 15rem;">
+            <img src="assets/img/evergreen/best-of-roy-black.jpg" class="card-img-top" alt="best-of-roy-black">
+            <div class="card-body">
+              <h5 class="card-title">Best of Roy Balck </h5>
+              <p class="card-text">Best of Roy Black<br><br></p>
+              <a href="#" class="btn btn-primary">Kupi</a>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="assets/img/evergreen/bob-dylan.jpg" class="card-img-top" alt="bob-dylan">
+            <div class="card-body">
+              <h5 class="card-title">Bob Dylan</h5>
+              <p class="card-text">Columbia<br><br></p>
+              <a href="#" class="btn btn-primary">Kupi</a>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="assets/img/jezz/miles-davis.jpg" class="card-img-top" alt="miles-davis">
+            <div class="card-body">
+              <h5 class="card-title">Miles Davis</h5>
+              <p class="card-text">Miles Ahead (Original Motion Picture Soundtrack)</p>
+              <a href="#" class="btn btn-primary">Kupi</a>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="assets/img/pop/dua-lipa.jpg" class="card-img-top" alt="dua-lipa">
+            <div class="card-body">
+              <h5 class="card-title">Dua Lipa</h5>
+              <p class="card-text">Future Nostalgia (The Moonlight Edition) </p>
+              <a href="#" class="btn btn-primary">Kupi</a>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="assets/img/domaci-izvodjaci/miso-kovac.jpg" class="card-img-top" alt="miso-kovac">
+            <div class="card-body">
+              <h5 class="card-title">Mišo Kovač</h5>
+              <p class="card-text">Rane Godine (1964. - 1969.) / Ostala Si Uvijek...</p>
+              <a href="#" class="btn btn-primary">Kupi</a>
+            </div>
+          </div>
+    </div>
+    <div id="about-me">
+
+    </div>
+    <!--kontakt forma i lokacija -->
+    <div id="contact-me">
+      <div class="forma">
+        <form action="#" method="POST">
+            <fieldset>
+                <label for="name">Ime i prezime</label> <br>
+                <input type="text" name="Name" id="name" placeholder="Ime . . . " required>
+                <input  type="text" name="LastName" id="last" placeholder="Prezime . . . " required><br>
+                <label  for="email">Email</label><br>
+                <input  type="email" name="email" id="email" placeholder="✉️ email" required><br>
+                <label for="message">Tekst</label><br>
+              <textarea class="text" name="message" id="message" rows="6" cols="47" required >
+              </textarea><br>
+              <Input class="submit" type="submit" value="Pošalji">
+            </fieldset>
+            </form>
+          </div>
+            <div class="contact">
+              <h4>Retro Shop<br>
+              Kraljice Natalije 14 <br>
+              34000 Kragujevac <br>
+              📞   064/939-59-02 <br>
+              office@retroshop.rs<br>
+              </h4>
+            </div>
+            <div id="maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2868.5561293657033!2d20.899730015338008!3d44.030566235964784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475726b4d66d62cf%3A0x2817c0fdfb2bd6ce!2z0JrRgNCw0ZnQuNGG0LUg0J3QsNGC0LDQu9C40ZjQtSwg0JrRgNCw0LPRg9GY0LXQstCw0YY!5e0!3m2!1ssr!2srs!4v1626007476214!5m2!1ssr!2srs" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+          </div>
+          <div id="foother">
+            <p class="footherP">2021 Retro Shop d.o.o. - Sva prava zadržana</p>
+          </div>
+    </div>
+    <!--Ucitan bs js-->
+    <script src="js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

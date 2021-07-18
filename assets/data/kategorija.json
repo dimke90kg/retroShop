@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"naziv": "Pop"
+	},
+	{
+		"id" : 2,
+		"naziv" : "Jazz"
+	},
+	{
+		"id": 3,
+		"naziv" : "Bluz"
+	}
+    {
+        "id":4,
+        "naziv" : "Evergreen"
+    }
+    {
+        "id":5,
+        "naziv" : "Domaći izvođači"
+    }
+]
