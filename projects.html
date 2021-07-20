@@ -97,12 +97,17 @@
         <img class="coverImgSt" src="assets/img/slike-za-sajt/drugaaaaa.jpg" alt="naslovna-slika">
     </div>
     <!--pretraga po ceni i kategoriji-->
-    <div id="filter-searchHiden">
+    <div id="filter-search">
       <form>
         <fieldset>
           <select class="custom-select1" id="sort1">
-            <option value="asc" selected>Cene rastuce</option>
-            <option value="desc">Cene opadajuce</option>
+            <option value="asc1" selected>Cene rastuce</option>
+            <option value="desc1">Cene opadajuce</option>
+          </select>
+          <select class="custom-select3" id="sort3">
+            <option value="pocetno" selected>Cena od:</option>
+            <option value="asc2" >0-1500</option>
+            <option value="desc2">1500-4000</option>
           </select>
           <select class="custom-select2" id="sortcategory">
             <option value="kategorija" selected>Kategorija</option>
@@ -114,32 +119,6 @@
           </select>
         </fieldset>
       </form>
-
-    </div>
-    <div id="filter-search">
-      
-        <form>
-          <fieldset>
-            <select class="custom-select" id="sort">
-              <option value="asc" selected>Cene rastuce</option>
-              <option value="desc">Cene opadajuce</option>
-            </select><br>
-            <label for="price-range" id="cene">Cena</label><br>
-            <input type="range" name="cena" id="price-range" min="0" max="100"><br>
-            <label>Kategorije</label><br>
-            <input type="checkbox" id="chech-pop" name="check-pop" value="pop">
-            <label for="chech-pop">Pop</label><br>
-            <input type="checkbox" id="chech-jazz" name="check-jazz" value="jazz">
-            <label for="chech-jazz" >Jazz</label><br>
-            <input type="checkbox" id="chech-bluz" name="check-bluz" value="bluz">
-            <label for="chech-bluz">Bluz</label><br>
-            <input type="checkbox" id="chech-evergreen" name="check-evergreen" value="evergreen">
-            <label for="chech-evergreen">Evergreen</label><br>
-            <input type="checkbox" id="chech-domaci" name="check-domaci" value="domaci">
-            <label for="chech-domaci">Domaći izvođači</label><br>
-          </fieldset>
-        </form>
-
       </div>
     <!--Proizvodi koji se ucitavaju pri ucitavanju stranice ,pre upotrebe filtera i logovanja ,vide ih svi korisnici -->
   

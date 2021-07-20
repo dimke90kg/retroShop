@@ -2,8 +2,9 @@
 * {
     box-sizing: border-box;
      padding: 0;
-     margin: 0
-    }
+     margin: 0;
+     }
+
 /* namesteno da naslov,navigacija,korpa,logovanje bude fiksirano*/
 #upper-part {
 
@@ -51,33 +52,29 @@ position: fixed;
 /* stilizovanje proizvoda koji su tu pr ucitavanju sajta */
 
 #products {
-    padding-left: 70px;
+    padding-left:150px;
     padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap ;
     gap: 15px;
-}
-#products {
-    display: inline-flex;
 }
 
 /* stilizovanje pretrage i filtera */   
 
 #filter-search {
-padding-left: 25px;
-
-display: flex ;
- display: inline-flex;  
- 
+    padding-left: 500px;
+    padding-top: 30px; 
 }
-#chech-pop, #searchProducts {
-    margin-top: 20px;
+#sort1 {
+    width: 200px;
 }
-#filter-searchHiden {
-    padding-left: 150px;
-    padding-top: 20px;
-    gap: 15px;
-    display: none;
+#sortcategory {
+    width: 200px;
+    margin-left: 20px;
+}
+#sort3 {
+    width: 200px;
+    margin-left: 20px;
 }
 /* stilizovanje kontakt forme */
 
@@ -218,36 +215,46 @@ h6 {
  
     /*responzivnost project strane*/
 
-   .coverImgSt {
-       width:550px;
-       height: 500px;
-   }
-   #coverImg {
-    padding-left: 0px;
-}
-#products {
-   display: grid;
-   padding-left: 15px;
+    .coverImgSt {
+        width:560px;
+        height: 500px;
+    }
+    #coverImg {
+     padding-left: 0px;
+ }
+ #products {
+    display: flex;
+    padding-left: 33px;
+  
+ }
+ #filter-search {
+     padding-top: 10px;
+     padding-left: 65px;
  
-}
-#filter-search {
-    padding-top: 10px;
-display: none;
-}
-#contact-me {
-    padding-left: 15px;
-    gap: 50px;
-    flex-direction: column;
-}
-#maps {
-padding-left: 75px;
-}
-.footherP {
- padding-left:15px ;
-}
-#filter-searchHiden {
-    display:table;
-}
+ }
+ #sort1 {
+     width: 150px;
+ }
+ #sortcategory {
+     width: 150px;
+     margin-left: 5px;
+ }
+ #sort3 {
+     width: 100px;
+     margin-left: 5px;
+ }
+ 
+ #contact-me {
+     padding-left: 28px;
+     gap: 50px;
+     flex-direction: column;
+ }
+ #maps {
+ padding-left:60px;
+ }
+ .footherP {
+  padding-left:15px ;
+ }
 
 /*responzivnost sing in strane*/
 
@@ -350,16 +357,29 @@ padding-left: 75px;
          padding-left: 0px;
      }
      #products {
-        display: grid;
+        display: flex;
         padding-left: 0px;
-      gap: 1px;
+        gap: 1px;
      }
      #maps {
-        padding-left: 22px;
+        padding-left: 35px;
         }
-        #filter-searchHiden {
-            display:table;
-            padding-left:110px;
+        #filter-search {
+            display: flexbox;
+            padding-left:30px;
         }
-
+        #sort1 {
+            width: 150px;
+        }
+        #sortcategory {
+            width: 150px;
+            margin-left: 5px;
+        }
+        #sort3 {
+            width: 100px;
+            margin-left: 5px;
+        }
+#contact-me {
+    padding-left: 1px;
+}
     } 
