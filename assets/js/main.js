@@ -17,9 +17,11 @@ window.onload = () => {
   /* Postavljeni osluskivaci za filter pretrage i sortiranje po ceni*/
   
   
-    document.getElementById("sort1").addEventListener("change", filterChange);
-    document.getElementById("searchProducts").addEventListener("search", filterChange);
-    document.getElementById("searchProducts").addEventListener("keyup", filterChange);
+  document.getElementById("sort1").addEventListener("change", filterChange);
+  document.getElementById("searchProducts").addEventListener("search", filterChange);
+  document.getElementById("searchProducts").addEventListener("keyup", filterChange);
+  document.getElementById("sort3").addEventListener("change", filterChange);
+  document.getElementById("sortcategory").addEventListener("change", filterChange);
   
   
   /*Dohvatanje iz JSON-a  */
@@ -61,9 +63,8 @@ window.onload = () => {
       document.getElementById("products").addEventListener("change", filterChange);
     }
     function showAlbums(data) {
-      /*data = filterIzvodjaci(data);
-      data = filterKategorija(data);
-      data = filterStanje(data);*/
+      /*data = filterKategorija(data);*/
+      data = filterStatus(data);
       data = searchProducts(data);
       data = sort(data);
       let html = "";
@@ -116,7 +117,23 @@ window.onload = () => {
       return html;
     }
   
-  
+    /* funkcija sortiranje dostupno,nije dostupno  */
+
+
+    function filterStatus(data) {
+      const stanje = document.getElementById("sort3").value;
+      if (stanje == "asc2") {
+        return data.filter((x) => x.naStanju);
+      }
+      if (stanje == "desc2") {
+        return data.filter((x) => !x.naStanju);
+      }
+      return data;
+    }
+
+
+/* funkcija sortiranje cene opadajuce,rastuce  */
+
     function sort(data) {
       const sortTip = document.getElementById("sort1").value;
   
