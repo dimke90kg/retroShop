@@ -63,7 +63,7 @@ window.onload = () => {
       document.getElementById("products").addEventListener("change", filterChange);
     }
     function showAlbums(data) {
-      /*data = filterKategorija(data);*/
+      data = filterCategory(data);
       data = filterStatus(data);
       data = searchProducts(data);
       data = sort(data);
@@ -75,7 +75,7 @@ window.onload = () => {
            }" alt="{element.slika.alt}">
            <div class="card-body">
            <h5 class="card-title"> ${element.naslov}</h5>
-           <p>${catchArtists(element.id)}</p>
+           <p>${catchArtistNameByID(element.id)}</p>
            <h5> ${element.cena} RSD</h5>
           
            <p id="${element.id}" value="${element.naStanju}"> ${
@@ -96,15 +96,27 @@ window.onload = () => {
         document.getElementById("products").innerHTML = html;
       }
     }
-    function filterChange() {
-      getData("albumi.json", showAlbums);
-    }
-    function catchArtists(id) {
+    
+
+
+
+    function catchArtistNameByID(id) {
       let izvodjaciI = izvodjaci.filter((obj) => obj.id == id);
       imeP = izvodjaciI[0].ime;
       prezimeP = izvodjaciI[0].prezime;
       return imeP + " " + prezimeP;
     }
+  
+  
+  
+    function catchArtistByID(id) {
+      console.log( izvodjaci.filter((obj) => obj.id == id));
+      return ( izvodjaci.filter((obj) => obj.id == id)[0]);
+    }
+
+
+
+
     function catchCategory(ids) {
       let html = "";
       let kategorijeIzvodjaci = kategorija.filter((elem) => ids.includes(elem.id));
@@ -121,11 +133,11 @@ window.onload = () => {
 
 
     function filterStatus(data) {
-      const stanje = document.getElementById("sort3").value;
-      if (stanje == "asc2") {
+      const el = document.getElementById("sort3").value;
+      if (el == "asc2") {
         return data.filter((x) => x.naStanju);
       }
-      if (stanje == "desc2") {
+      if (el == "desc2") {
         return data.filter((x) => !x.naStanju);
       }
       return data;
@@ -147,11 +159,35 @@ window.onload = () => {
       );
     }
   
+
+    /* filter sort po kategoriji */
+
+
+    function filterCategory(data) {
+      document.getElementById ("sortcategory").value;
+        const chek = document.getElementById ("sortcategory").value;
+  
+       if(chek==0){
+        return data;
+       }
+         
+        return data.filter((x) => x.kategorija == chek);
+        
+      }
     
-  /* Uradjena pretraga proizvoda po naslovu (potrebno je odraditi i po izvodjacu)*/
+  
+  /* Uradjena pretraga proizvoda po naslovu i po izvodjacu*/
   
   
-    function searchProducts(data) {
+  function searchProducts(data) { 
+    const dataByAlbumName = searchProductsByAlbumName(data);
+    const dataByFirstName = searchProductsByArtistFirstName(data);
+    const dataByLastName = searchProductsByArtistLastName(data);
+  
+    return dataByAlbumName.concat(dataByFirstName).concat(dataByLastName);
+  }
+  
+    function  searchProductsByAlbumName(data) {
       var value = document.getElementById("searchProducts").value.toLowerCase();
         console.log(value);
         if (value) {
@@ -160,47 +196,34 @@ window.onload = () => {
           });
         }
         return data;
-      }
-      
+      };
   
+      
+      function searchProductsByArtistFirstName(data) {
+        var value = document.getElementById("searchProducts").value.toLowerCase();
+          console.log(value);
+          if (value) {
+            return data.filter(function (el) {
+              return catchArtistByID(el.izvodjacID).ime.toLowerCase().indexOf(value) !== -1;
+            });
+          }
+          return [];
+        }
+        function searchProductsByArtistLastName(data) {
+          var value = document.getElementById("searchProducts").value.toLowerCase();
+            console.log(value);
+            if (value) {
+              return data.filter(function (el) {
+                return catchArtistByID(el.izvodjacID).prezime.toLowerCase().indexOf(value) !== -1;
+              });
+            }
+            return [];
+          }
   
   
     function filterChange() {
       getData("albumi.json",showAlbums);
     }
-  }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+}
   

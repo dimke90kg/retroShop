@@ -83,7 +83,8 @@
     },
     {
         "id": 17,
-        "ime": "Ac-Dc"
+        "ime": "Ac-Dc",
+        "prezime": "" 
     },
     {
         "id": 18,
