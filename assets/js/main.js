@@ -84,7 +84,7 @@ window.onload = () => {
            <p class="card-text">
                  ${catchCategory(element.kategorija)}
            </p>
-           <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+           <a class="btn btn-primary" data-id="${element.id}">Dodaj u korpu</a>
           </div>
           </div>
           </div>`;
@@ -95,12 +95,21 @@ window.onload = () => {
       } else {
         document.getElementById("products").innerHTML = html;
       }
-    }
+      const basket = document.getElementById("addBasket");
+
+      var button = document.getElementsByClassName("btn btn-primary");
+  
+      for (let i = 0; i < button.length; i++) {
+      button[i].addEventListener("click", addToBasket);
+  
+      }
+      }
     
 
-
+/*dohvatanje izvodjaca ime i prezime po  id-u */
 
     function catchArtistNameByID(id) {
+
       let izvodjaciI = izvodjaci.filter((obj) => obj.id == id);
       imeP = izvodjaciI[0].ime;
       prezimeP = izvodjaciI[0].prezime;
@@ -108,13 +117,17 @@ window.onload = () => {
     }
   
   
-  
+  /*dohvatanje izvodjaca po id-u */
+
+
     function catchArtistByID(id) {
       console.log( izvodjaci.filter((obj) => obj.id == id));
       return ( izvodjaci.filter((obj) => obj.id == id)[0]);
     }
 
 
+
+    /*dohvatanje kategorije po id-u */
 
 
     function catchCategory(ids) {
@@ -220,7 +233,44 @@ window.onload = () => {
             return [];
           }
   
-  
+  /*pocetak rada korpe */
+
+      function addToBasket() {
+
+        const artistId = this.dataset.id;
+      
+         let cart = [];
+
+       const cookies = document.cookie
+         .split("; ")
+          .find((row) => row.startsWith("cart="));
+       if (cookies) {
+         cart = JSON.parse(cookies.split("=")[1]);
+    }
+
+        if (cart.some((x) => x.id == artistId)) {
+          cart.find((x) => x.id == artistId).quantity++;
+     }   
+    else {
+      cart.push({ id: artistId, quantity: 1 });
+    }
+
+    setCookie("cart", JSON.stringify(cart), 5);
+    
+}
+
+/* setovanje kolacica */
+function setCookie(name, value, exDays) {
+  let today = new Date();
+
+
+
+  today.setTime(today.getTime() + 1000 * 60 * 60 * 24 * exDays);
+  document.cookie =
+    name + "=" + value + "; " + "expires=" + today.toUTCString();
+}
+
+
     function filterChange() {
       getData("albumi.json",showAlbums);
     }
