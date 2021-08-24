@@ -84,7 +84,7 @@ window.onload = () => {
            <p class="card-text">
                  ${catchCategory(element.kategorija)}
            </p>
-           <a class="btn btn-primary" data-id="${element.id}">Dodaj u korpu</a>
+           <a class="btn btn-outline-secondary" data-id="${element.id}">Dodaj u korpu</a>
           </div>
           </div>
           </div>`;
@@ -97,7 +97,7 @@ window.onload = () => {
       }
       const basket = document.getElementById("addBasket");
 
-      var button = document.getElementsByClassName("btn btn-primary");
+      var button = document.getElementsByClassName("btn btn-outline-secondary");
   
       for (let i = 0; i < button.length; i++) {
       button[i].addEventListener("click", addToBasket);
@@ -109,10 +109,9 @@ window.onload = () => {
 /*dohvatanje izvodjaca ime i prezime po  id-u */
 
     function catchArtistNameByID(id) {
-
       let izvodjaciI = izvodjaci.filter((obj) => obj.id == id);
-      imeP = izvodjaciI[0].ime;
-      prezimeP = izvodjaciI[0].prezime;
+      let imeP = izvodjaciI[0].ime;
+      let prezimeP = izvodjaciI[0].prezime;
       return imeP + " " + prezimeP;
     }
   
@@ -202,7 +201,6 @@ window.onload = () => {
   
     function  searchProductsByAlbumName(data) {
       var value = document.getElementById("searchProducts").value.toLowerCase();
-        console.log(value);
         if (value) {
           return data.filter(function (el) {
             return el.naslov.toLowerCase().indexOf(value) !== -1;
@@ -214,7 +212,6 @@ window.onload = () => {
       
       function searchProductsByArtistFirstName(data) {
         var value = document.getElementById("searchProducts").value.toLowerCase();
-          console.log(value);
           if (value) {
             return data.filter(function (el) {
               return catchArtistByID(el.izvodjacID).ime.toLowerCase().indexOf(value) !== -1;
@@ -224,7 +221,6 @@ window.onload = () => {
         }
         function searchProductsByArtistLastName(data) {
           var value = document.getElementById("searchProducts").value.toLowerCase();
-            console.log(value);
             if (value) {
               return data.filter(function (el) {
                 return catchArtistByID(el.izvodjacID).prezime.toLowerCase().indexOf(value) !== -1;
@@ -233,31 +229,37 @@ window.onload = () => {
             return [];
           }
   
-  /*pocetak rada korpe */
+  
 
-      function addToBasket() {
+    /* korpa */
 
-        const artistId = this.dataset.id;
-      
-         let cart = [];
+    function addToBasket() {
 
-       const cookies = document.cookie
-         .split("; ")
-          .find((row) => row.startsWith("cart="));
-       if (cookies) {
-         cart = JSON.parse(cookies.split("=")[1]);
-    }
-
-        if (cart.some((x) => x.id == artistId)) {
-          cart.find((x) => x.id == artistId).quantity++;
-     }   
-    else {
-      cart.push({ id: artistId, quantity: 1 });
-    }
-
-    setCookie("cart", JSON.stringify(cart), 5);
+      const artistId = this.dataset.id;
     
+       let cart = [];
+
+     const cookies = document.cookie
+       .split("; ")
+        .find((row) => row.startsWith("cart="));
+     if (cookies) {
+       cart = JSON.parse(cookies.split("=")[1]);
+  }
+
+  if (cart.some((x) => x.id == artistId)) {
+    window.alert('vec postoji u korpi!');
+        //cart.find((x) => x.id == artistId).quantity++;
+   }   
+  else {
+    document.getElementsByClassName('badge')[0].innerHTML = ++proizvodiUKorpi;
+    cart.push({ id: artistId });
+  }
+
+  setCookie("cart", JSON.stringify(cart), 5);
+   
 }
+
+let proizvodiUKorpi = 0;
 
 /* setovanje kolacica */
 function setCookie(name, value, exDays) {

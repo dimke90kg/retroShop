@@ -33,7 +33,7 @@
         <div class="search-products">
           <input  type="search" id="searchProducts" placeholder="Pretraži proizvod . . ." >
         </div> 
-          <a href="basket"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"></a>
+        <a href="basket.html"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"><span id="badge" class="badge">0</span></a>
           <a href="logIn.html"> <img class="img-logIn" src="assets/img/slike-za-sajt/img-logIn.png" alt="log in"></a>
       </div>
       <!--navigacija-->
@@ -80,11 +80,12 @@
       <form>
         <fieldset>
           <select class="custom-select1" id="sort1">
-            <option value="asc1" selected>Cene rastuce</option>
+            <option value="asc1">Cene rastuce</option>
             <option value="desc1">Cene opadajuce</option>
           </select>
           <select class="custom-select3" id="sort3">
-            <option value="asc2" selected >Na stanju</option>
+            <option value="initialV" selected >Filter stanje</option>
+            <option value="asc2" >Na stanju</option>
             <option value="desc2">Nije dostupno</option>
           </select>
           <select class="custom-select2" id="sortcategory">
@@ -101,47 +102,8 @@
     <!--Proizvodi koji se ucitavaju pri ucitavanju stranice ,pre upotrebe filtera i logovanja ,vide ih svi korisnici -->
   
     <div id="products">
-    <!--  <div class="card" style="width: 15rem;">
-            <img src="assets/img/evergreen/best-of-roy-black.jpg" class="card-img-top" alt="best-of-roy-black">
-            <div class="card-body">
-              <h5 class="card-title">Best of Roy Balck </h5>
-              <p class="card-text">Best of Roy Black<br><br></p>
-              <a href="#" class="btn btn-primary">Kupi</a>
-            </div>
-          </div>
-          <div class="card" style="width: 15rem;">
-            <img src="assets/img/evergreen/bob-dylan.jpg" class="card-img-top" alt="bob-dylan">
-            <div class="card-body">
-              <h5 class="card-title">Bob Dylan</h5>
-              <p class="card-text">Columbia<br><br></p>
-              <a href="#" class="btn btn-primary">Kupi</a>
-            </div>
-          </div>
-          <div class="card" style="width: 15rem;">
-            <img src="assets/img/jezz/miles-davis.jpg" class="card-img-top" alt="miles-davis">
-            <div class="card-body">
-              <h5 class="card-title">Miles Davis</h5>
-              <p class="card-text">Miles Ahead (Original Motion Picture Soundtrack)</p>
-              <a href="#" class="btn btn-primary">Kupi</a>
-            </div>
-          </div>
-          <div class="card" style="width: 15rem;">
-            <img src="assets/img/pop/dua-lipa.jpg" class="card-img-top" alt="dua-lipa">
-            <div class="card-body">
-              <h5 class="card-title">Dua Lipa</h5>
-              <p class="card-text">Future Nostalgia (The Moonlight Edition) </p>
-              <a href="#" class="btn btn-primary">Kupi</a>
-            </div>
-          </div>
-          <div class="card" style="width: 15rem;">
-            <img src="assets/img/domaci-izvodjaci/miso-kovac.jpg" class="card-img-top" alt="miso-kovac">
-            <div class="card-body">
-              <h5 class="card-title">Mišo Kovač</h5>
-              <p class="card-text">Rane Godine (1964. - 1969.) / Ostala Si Uvijek...</p>
-              <a href="#" class="btn btn-primary">Kupi</a>
-            </div>
-          </div>
-    </div>-->
+   
+    </div>
     <div id="about-me">
 
     </div>
@@ -177,7 +139,7 @@
           </div>
     </div>
     <!--Ucitan bs js-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
