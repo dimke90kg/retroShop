@@ -24,7 +24,7 @@ position: fixed;
     padding-left: 20px;
     padding-top: 20px;
 }
-/* stilizovanje korpe,logo in dugmeta i omiljenih prozvoda */
+/* stilizovanje korpe,logo in dugmeta */
 #logBasket {
     display: flex;
     justify-content: flex-end;
@@ -125,7 +125,7 @@ margin-top: 20px;
     margin-left: 450px;
     width: 300px;
 }
-.logInBtn{
+#logInBtn{
     margin-top: 20px;
     margin-left: 450px;
     background-color: rgb(238, 165, 165);   
@@ -145,7 +145,7 @@ h6 {
     margin-top: 10px;
     margin-left: 500px;
 }
-.regBtn {
+#regBtn {
     width: 300px;
     background-color: rgb(238, 165, 165);
     display: inline-block;
@@ -153,7 +153,7 @@ h6 {
     border: none;
 }
 
-.cancelbtn {
+#cancelbtn {
     margin-left: 450px;
     margin-top: 5px;
     background-color: rgb(238, 165, 165);
@@ -166,7 +166,7 @@ h6 {
     list-style: none;
     color: black;
 }
-/*stilizovanje sing in forme*/
+/*stilizovanje sing up forme*/
 
 #singInForm {
     margin-bottom: 20px;
@@ -178,12 +178,12 @@ h6 {
 }
 
 
-#reg-name, #reg-surname, #reg-email, #reg-pass, #reg-pass2 {
+#reg-name-id, #reg-surname-id, #reg-email-id, #reg-pass-id, #reg-pass2-id {
     margin-top: 1px;
     margin-left: 450px;
     width: 300px;
 }
-.registrationBtn {
+#registrationBtn {
     margin-top: 20px;
     margin-left: 450px;
     background-color: rgb(238, 165, 165);   
@@ -347,6 +347,32 @@ h2 {
 .badge {
     background-color: black;
 }
+
+
+
+#sakrivenoDugme {
+    margin-top:20px;
+    border-radius: 5px;
+}
+
+#searchProducts{
+    margin-top:20px;
+
+}
+.basketEmpty {
+    text-align: center;
+    font-size:30px;
+}
+
+.badge1 {
+    text-decoration: none;
+    color:rgb(73, 71, 71);
+
+}
+#logInForm {
+    text-align: center;
+    font-size: 50px;
+}
 /* media responzivnost za korpu  */   
 @media (min-width: 768px) {
 	.shopping-cart .items .product .info {
@@ -367,7 +393,7 @@ h2 {
 		padding: 4px 10px;
 		text-align: center; 
 	}
-
+ 
 }
 /* media responzivnost za tablete  */   
 
@@ -469,7 +495,7 @@ h2 {
         margin-left: 15px;
         width: 300px;
     }
-    .logInBtn{
+    #logInBtn{
         margin-top: 20px;
         margin-left: 15px;
         width: 120px;
