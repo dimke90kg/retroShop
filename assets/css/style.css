@@ -377,6 +377,8 @@ h2 {
     text-align: center;
 
 }
+#buttonBuy {
+    margin-bottom: 1px;
 }
 /* media responzivnost za korpu  */   
 @media (min-width: 768px) {

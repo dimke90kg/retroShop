@@ -111,7 +111,7 @@ window.onload = () => {
     data = sort(data);
     let html = "";
     data.forEach((element) => {
-      html += `<div class="card" style="width: 15rem;">
+      html += `<div class="card" style="width: 15rem; style="hight: 10rem; ">
           <img class="imgCart" src="${
             element.slika.src
           }" alt="{element.slika.alt}">
@@ -126,7 +126,7 @@ window.onload = () => {
           <p class="card-text">
                 ${catchCategory(element.kategorija)}
           </p>
-          <a class="btn btn-outline-secondary"  data-id="${element.id}" data-available="${element.naStanju}">Dodaj u korpu</a>
+          <a class="btn btn-outline-secondary" id="buttonBuy" data-id="${element.id}" data-available="${element.naStanju}">Dodaj u korpu</a>
         </div>
         </div>
         </div>`;
