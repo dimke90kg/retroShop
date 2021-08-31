@@ -38,7 +38,7 @@ window.onload = () => {
 
     if (loginInformacije) {
       document.getElementById('logOut').hidden = false;
-      console.log(JSON.stringify(loginInformacije));
+  
       document.getElementById('badge1').innerHTML = 'Zdravo, ' + loginInformacije.ime + '!';
     } else {
       document.getElementById('logOut').hidden = true;
@@ -112,7 +112,7 @@ window.onload = () => {
     let html = "";
     data.forEach((element) => {
       html += `<div class="card" style="width: 15rem;">
-          <img src="${
+          <img class="imgCart" src="${
             element.slika.src
           }" alt="{element.slika.alt}">
           <div class="card-body">
@@ -126,7 +126,7 @@ window.onload = () => {
           <p class="card-text">
                 ${catchCategory(element.kategorija)}
           </p>
-          <a class="btn btn-outline-secondary" data-id="${element.id}" data-available="${element.naStanju}">Dodaj u korpu</a>
+          <a class="btn btn-outline-secondary"  data-id="${element.id}" data-available="${element.naStanju}">Dodaj u korpu</a>
         </div>
         </div>
         </div>`;

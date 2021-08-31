@@ -35,7 +35,7 @@
         <div class="search-products">
           <input  type="search" id="searchProducts" placeholder="Pretraži proizvod . . ." >
         </div> 
-          <a href="basket"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"></a>
+          <a href="basket.html"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"></a>
           <a href="logIn.html"> <img class="img-logIn" src="assets/img/slike-za-sajt/img-logIn.png" alt="log in"></a>
       </div>
 
@@ -84,18 +84,18 @@
         </div>
       
         <div class="container">
-            <label class="lableName" for="reg-name"><b>Ime</b></label><br>
-          <input type="text" placeholder="Unesi Ime" name="ime" id="reg-name" required><br>
-          <label class="lableSurname" for="reg-surname"><b>Prezime</b></label><br>
-          <input type="text" placeholder="Unesi Prezime" name="prezime" id="reg-surname" required><br>
-          <label class="lableRegEmail" for="reg-email"><b>Email</b></label><br>
-          <input type="text" placeholder="Unesi email" name="email" id="reg-email" required><br>
-          <label class="lableRegPsw" for="reg-pass"><b>Šifra</b></label><br>
-          <input type="password" placeholder="Unesi šifru" name="psw" id="reg-pass" required><br>
-          <label class="lableRegPsw2" for="reg-pass2"><b>Ponovi šifru</b></label><br>
-          <input type="password" placeholder="Ponovi šifru" name="psw" id="reg-pass2" required><br>
-          <button type="submit" class="registrationBtn">Registracija</button>
-          <input class="acceptTerms" type="checkbox" name="prihvati uslove sajta">
+            <label class="lableName" for="reg-name-id"><b>Ime</b></label><br>
+          <input type="text" placeholder="Unesi Ime" name="ime" id="reg-name-id" required><br>
+          <label class="lableSurname" for="reg-surname-id"><b>Prezime</b></label><br>
+          <input type="text" placeholder="Unesi Prezime" name="prezime" id="reg-surname-id" required><br>
+          <label class="lableRegEmail" for="reg-email-id"><b>Email</b></label><br>
+          <input type="text" placeholder="Unesi email" name="email" id="reg-email-id" required><br>
+          <label class="lableRegPsw" for="reg-pass-id"><b>Šifra</b></label><br>
+          <input type="password" placeholder="Unesi šifru" name="psw" id="reg-pass-id" required><br>
+          <label class="lableRegPsw2" for="reg-pass2-id"><b>Ponovi šifru</b></label><br>
+          <input type="password" placeholder="Ponovi šifru" name="psw" id="reg-pass2-id" required><br>
+          <button type="button" id="registrationBtn" >Registracija</button>
+          <input id="acceptTerms" type="checkbox" name="prihvati uslove sajta">
           Slažem se opštim ulovima korišćenja sajta
         </div>
       </fieldset>
@@ -103,7 +103,9 @@
     
   </div>
 
-  <!--Ucitan bs js-->
+  <!--Ucitan bs js-->\
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/logIn.js"></script>
   <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

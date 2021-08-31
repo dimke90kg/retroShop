@@ -39,7 +39,6 @@ logoutbutton.addEventListener('click', () => {
 
     if (loginInformacije) {
       document.getElementById('logOut').hidden = false;
-      console.log(JSON.stringify(loginInformacije));
       document.getElementById('badge1').innerHTML = 'Zdravo, ' + loginInformacije.ime + '!';
     } else {
       document.getElementById('logOut').hidden = true;
@@ -207,9 +206,9 @@ logoutbutton.addEventListener('click', () => {
       html +=`<div class="col-md-12 col-lg-4">
       <div class="summary">
         <h3>Summary</h3>
-        <div class="summary-item"><span class="text">CENA</span><span class="price">${cena} RSD</span></div>
+        <div class="summary-item"><span class="text">CENA</span><span class="price">${cena},00 RSD</span></div>
         <div class="summary-item"><span class="text">POŠTARINA:</span><span class="price">300,00 RSD</span></div>
-        <div class="summary-item"><span class="text">UKUPNA CENA</span><span class="price">${cena + 300} RSD</span></div>
+        <div class="summary-item"><span class="text">UKUPNA CENA</span><span class="price">${cena + 300},00 RSD</span></div>
         <button type="button" id="buy" class="btn btn-outline-secondary">Kupi</button>
         <button type="button" id="delete-all" class="btn btn-outline-secondary">Obrisi korpu </button>
         </div>
@@ -239,7 +238,6 @@ logoutbutton.addEventListener('click', () => {
     else {
       html = "<div class=basketEmpty>Korpa je prazna</div>";
       korpa.innerHTML = html;
-      console.log("test");
     }
   }
 /* setovanje kolacica (ovakva funkcija postoji i u main.js)*/

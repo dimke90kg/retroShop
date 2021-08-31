@@ -33,8 +33,9 @@
         <div class="search-products">
           <input  type="search" id="searchProducts" placeholder="Pretraži proizvod . . ." >
         </div> 
-          <a href="basket"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"></a>
-          <a href="logIn.html"> <img class="img-logIn" src="assets/img/slike-za-sajt/img-logIn.png" alt="log in"></a>
+          <a href="basket.html"><img class="img-basket" src="assets/img/slike-za-sajt/basket-img.png" alt="add basket"><span id="badge" class="badge">0</span></a>
+          <a href="logIn.html"> <img class="img-logIn" src="assets/img/slike-za-sajt/img-logIn.png" alt="log in"><span id="badge1" class="badge1"></span></a>
+          <div id="sakrivenoDugme"><button id="logOut"class="btn-close" aria-label="Close"></button></div>
       </div>
       <!--navigacija-->
       <div id="nab-bar">
@@ -73,7 +74,7 @@
     </div>
   </div>
   <div id="logInForm">
-    <form action="#" method="post">
+    <form action="#!" method="post">
         <div class="imgcontainer">
           <img id="logFormImg" src="assets/img/slike-za-sajt/img-logIn.png" alt="logIn" class="logovanje">
         </div>
@@ -84,20 +85,23 @@
       
           <label class="lablePsw" for="log-pass"><b>Šifra</b></label><br>
           <input type="password" placeholder="Unesi šifru" name="psw" id="log-pass" required><br>
-          <button type="submit" class="logInBtn ">Prijavi se</button>
+          <button type="button" id="logInBtn">Prijavi se</button>
         </div>
         <div class="container">
-          <button type="button" class="cancelbtn">Otkaži</button><br>
+          <button type="button" id="cancelbtn">Otkaži</button><br>
           <span class="psw"><a class="forgetPsw" href="">Zaboravljena lozinka?</a></span>
         </div>
       </form>
   </div>
-  <div class="dntPsw">
+  <div class="dntPsw" id="dntPsw">
       <h6>Ukoliko niste registrovan korisnik</h6>
-    <button type="button" class="regBtn"> Registruj se </button>
+    <button type="button" id="regBtn"> Registruj se </button>
     
   </div>
   <!--Ucitan bs js-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="assets/js/logIn.js"></script>
+ 
   <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
