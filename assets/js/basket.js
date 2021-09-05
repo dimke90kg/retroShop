@@ -2,14 +2,16 @@ window.onload = () => {
   let izvodjaci = [];
   let albumi = [];
   let kategorija = [];
-/*uradjeno log out dugme koje se pojavi kad je korisnik logavan.
-kad se izloguje brisu se kolacici i vraca na pocetnu stranu*/
+
+  /*uradjeno log out dugme koje se pojavi kad je korisnik logavan.
+  kad se izloguje brisu se kolacici i vraca na pocetnu stranu*/
   logoutbutton = document.getElementById('logOut');
-logoutbutton.addEventListener('click', () => {
-  setCookie("cart", null, -1);
-  setCookie("login", null, -1);
-  window.location = '/projects.html';
-});
+  logoutbutton.addEventListener('click', () => {
+    setCookie("cart", null, -1);
+    setCookie("login", null, -1);
+    window.location = '/projects.html';
+  });
+
 /* dohvatanje broja artikala da bi pored korpe pisalo koliko artikala ima u korpi*/
   const dohvatiBrojArtikala = () => {
     const cookies = document.cookie
@@ -45,7 +47,8 @@ logoutbutton.addEventListener('click', () => {
     }
   }
   parsirajLogin();
-/* od 50 linije do 123 iskopiran kod iz main.js ,da bi korpa mogla da radi*/
+
+  /* od 50 linije do 123 iskopiran kod iz main.js ,da bi korpa mogla da radi*/
   getData("kategorija.json", showCategorie);
   getData("izvodjaci.json", showArtists);
   getData("albumi.json", (data) => {
@@ -122,7 +125,8 @@ logoutbutton.addEventListener('click', () => {
     }
     return html;
   }
-/* brisanje korpe,kada se obrise korpa automatski se brisu i kolacici*/
+
+  /* brisanje korpe,kada se obrise korpa automatski se brisu i kolacici*/
   const deleteProduct = (el) => {
     const id = el.dataset.id;
     const cookies = document.cookie.split("; ").find((row) => row.startsWith("cart="));
@@ -140,14 +144,16 @@ logoutbutton.addEventListener('click', () => {
       chekKorpa();
     }
   }
-/*menjanje cene promenom kolicine */
+
+  /*menjanje cene promenom kolicine */
   const changePrice = (el) => {
     if (el.value == 0) { el.value = 1; };
     cene[el.dataset.id] = el.value * catchAlbumByID(el.dataset.id).cena;
  
     chekKorpa();
   }
-/*glavna funkcija za korpu  */
+
+  /*glavna funkcija za korpu  */
   function chekKorpa() {
     dohvatiBrojArtikala();
     cena = 0;
@@ -221,7 +227,8 @@ logoutbutton.addEventListener('click', () => {
       </div>`;
  
       korpa.innerHTML = html;
-/*dugmici za kupovinu,kolicinu */
+
+      /*dugmici za kupovinu,kolicinu */
       kolicine = document.getElementsByClassName('form-control quantity-input');
       for (let i = 0; i < kolicine.length; i++) {
         kolicine[i].addEventListener("click", () => {changePrice(kolicine[i])});
@@ -236,16 +243,18 @@ logoutbutton.addEventListener('click', () => {
       document.getElementById('buy').addEventListener('click', () => {window.location='/contactForm.html';});
     } 
     else {
-      html = "<div class=basketEmpty>Korpa je prazna</div>";
+      html = '<div class=basketEmpty> <img id="emptyImg" src="assets/img/slike-za-sajt/prazna-korpa.jpg"></img></div>';
       korpa.innerHTML = html;
     }
   }
-/* setovanje kolacica (ovakva funkcija postoji i u main.js)*/
+
+  /* setovanje kolacica (ovakva funkcija postoji i u main.js)*/
   function setCookie(name, value, exDays) {
     let today = new Date();
     today.setTime(today.getTime() + 1000 * 60 * 60 * 24 * exDays);
     document.cookie = name + "=" + value + "; " + "expires=" + today.toUTCString();
   }
+  
   /*Brosanje kolacica (postoji u main.js u) */
   function deleteAll() {
     setCookie("cart", null, -1);

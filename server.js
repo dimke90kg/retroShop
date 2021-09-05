@@ -19,6 +19,7 @@ connection.connect(function (error) {
 
 const app = express();
 const port = 5000;
+
 /*podizanje servera */
 app.listen(port, function () {
   console.log("Server je dignut na portu " + port);
@@ -30,6 +31,7 @@ app.use(
     extended: true,
   })
 );
+
 /*podesavanja servera,koji zahtevi su dozvoljeni */
 app.use((req, res, next) => {
   res.append("Access-Control-Allow-Origin", ["*"]);
@@ -39,6 +41,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static(__dirname, { index: "projects.html" }));
+
 /* sta se radi na log in zahtevu */
 app.post("/login", function (req, res) {
   let email = req.body.email;

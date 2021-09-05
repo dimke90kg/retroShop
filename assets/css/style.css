@@ -5,6 +5,12 @@
      margin: 0;
      }
 
+
+ @font-face {
+    src: url("../fonts/Montserrat-Medium.ttf");
+    font-family:"Montserrat-Medium";
+    }
+
 /* namesteno da naslov,navigacija,korpa,logovanje bude fiksirano*/
 #upper-part {
 
@@ -58,6 +64,26 @@ position: fixed;
     flex-wrap: wrap ;
     gap: 15px;
 }
+#about-me {
+    padding-top: 20px;
+    padding-left:150px;
+}
+#about-me {
+    display: flex;
+}
+
+#aobut-txt {
+position: relative;
+padding-left: 100px;
+}
+
+#imgGramofon{
+    width: 500px;
+    height: 250px;
+}
+#imgImg {
+    width: 500px;
+}
 
 /* stilizovanje pretrage i filtera */   
 
@@ -84,12 +110,13 @@ position: fixed;
   display: flex;
   flex-direction: row;
   gap:150px;
+  font-family:Montserrat-Medium;
   
   
 }
 .contact {
     font-size: 2em;
-    font-family: monospace;
+    font-family:Montserrat-Medium;
   }
   h4 {
       padding-top: 50px;
@@ -165,6 +192,10 @@ h6 {
     text-decoration: none;
     list-style: none;
     color: black;
+}
+#lgnPicture {
+    width: 400px;
+    margin-left: 300px;
 }
 /*stilizovanje sing up forme*/
 
@@ -380,6 +411,9 @@ h2 {
 #buttonBuy {
     margin-bottom: 1px;
 }
+#emptyImg {
+    width: 350px;
+}
 /* media responzivnost za korpu  */   
 @media (min-width: 768px) {
 	.shopping-cart .items .product .info {
@@ -400,8 +434,8 @@ h2 {
 		padding: 4px 10px;
 		text-align: center; 
 	}
- 
 }
+
 /* media responzivnost za tablete  */   
 
 
@@ -443,12 +477,33 @@ h2 {
      gap: 50px;
      flex-direction: column;
  }
+ #about-me {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 10px;
+}
+#imgImg {
+    width:480px;
+    padding-left: 20px;
+}
+#aobut-txt{
+padding-left:20px;
+}
+#imgGramofon {
+    width: 480px;
+    height: 200px;
+}
  #maps {
  padding-left:60px;
  }
  .footherP {
   padding-left:15px ;
  }
+ .card {
+    width: 10rem;
+    
+}
 
 /*responzivnost sing in strane*/
 
@@ -462,12 +517,12 @@ h2 {
 }
 
 
-#reg-name, #reg-surname, #reg-email, #reg-pass, #reg-pass2 {
+#reg-name-id, #reg-surname-id, #reg-email-id, #reg-pass-id, #reg-pass2-id {
     margin-top: 1px;
     margin-left: 15px;
     width: 300px;
 }
-.registrationBtn {
+#registrationBtn {
     margin-top: 20px;
     margin-left: 15px;
     background-color: rgb(238, 165, 165);   
@@ -528,7 +583,7 @@ h2 {
         border: none;
     }
     
-    .cancelbtn {
+    #cancelbtn {
         margin-left: 30px;
         margin-top: 5px;
         background-color: rgb(238, 165, 165);
@@ -536,7 +591,26 @@ h2 {
         width: 80px;
       
     }
-}
+    #lgnPicture{
+        width: 250px;
+        margin-left: 0px;
+    }
+    #emptyImg {
+        width: 250px;
+    }
+    /*responzivnost kontakt forme pri kupovini*/
+    .controls {
+        width:200px;
+        background-color: white;
+    }
+    .form-group {
+    width:300px;
+    background-color: white;
+    }
+    .mb-3 {
+        width:200px;
+    }
+      
     /*responzivnost za mobilne telefone */
 
 
@@ -576,5 +650,39 @@ h2 {
         }
 #contact-me {
     padding-left: 1px;
+}
+#lgnPicture{
+    width: 200px;
+    margin-left: 0px;
+}
+#emptyImg {
+    width: 250px;
+}
+#about-me {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+}
+#imgImg {
+    width:480px;
+    padding-left: 0px;
+}
+#aobut-txt{
+padding-left:0px;
+}
+#imgGramofon {
+    width: 480px;
+    height: 200px;
+}
+.controls {
+    width:200px;
+    background-color: white;
+}
+.form-group {
+width:300px;
+background-color: white;
+}
+.mb-3 {
+    width:200px;
 }
     } 

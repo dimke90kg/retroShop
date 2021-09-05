@@ -38,7 +38,7 @@ const parsirajLogin = () => {
     }
 
     if (loginInformacije) {
-        document.getElementById('logInForm').innerHTML = 'Ulogovani ste kao: ' + loginInformacije.ime + ' ' + loginInformacije.prezime;
+        document.getElementById('logInForm').innerHTML ='<img id="lgnPicture" src="assets/img/slike-za-sajt/logInImg.jpg"></img> Ulogovani ste kao: ' + loginInformacije.ime + ' ' + loginInformacije.prezime;
         document.getElementById('dntPsw').innerHTML = '';
         document.getElementById('logOut').hidden = false;
         document.getElementById('badge1').innerHTML = 'Zdravo, ' + loginInformacije.ime + '!';
@@ -95,6 +95,20 @@ function signUp() {
 
     let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let emailTest = emailRegex.test(email);
+    let imeRegex = /^[A-Z][a-z]{2,14}(\s[A-Z][a-z]{2,14})*$/;
+    let imeTest =imeRegex.test(ime);
+    let prezimeRegex = /^[A-Z][a-z]{2,14}(\s[A-Z][a-z]{2,14})*$/;
+    let prezimeTest = prezimeRegex.test(prezime);
+
+    if (!imeTest) {
+        window.alert('Neispravno ime');
+        return;
+    }
+
+    if (!prezimeTest) {
+        window.alert('Neispravno prezime');
+        return;
+    }
 
     if (!emailTest) {
         window.alert('Neispravan email format');
@@ -106,18 +120,14 @@ function signUp() {
         return;
     }
 
-    if (ime.length == 0 || prezime.length == 0) {
-        window.alert('Polja ne smeju biti prazna');
-        return;
-    }
 
     if (sifra.length < 5) {
-        window.alert('Sifra mora biti barem 6 karaktera');
+        window.alert('Šifra mora biti barem 6 karaktera');
         return;
     }
 
     if (!check.checked) {
-        window.alert("uslovi moraju biti cekirani")
+        window.alert("uslovi moraju biti čekirani")
         return;
     }
 
@@ -131,7 +141,7 @@ function signUp() {
             window.location.href = "projects.html";
         }
         if (response.data.result == "korisnik sa tim emailom postoji") {
-            alert("Korisnik sa datim mejlom vec postoji");
+            alert("Korisnik sa datim mejlom već postoji");
         }
     })
     .catch(function (error) {

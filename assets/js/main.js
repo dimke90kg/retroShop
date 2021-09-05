@@ -1,71 +1,20 @@
 
-
 window.onload = () => {
-
-  /*  sakriveno dugme za odjavljivanje */
-  logoutbutton = document.getElementById('logOut');
-  logoutbutton.addEventListener('click', () => {
-    setCookie("cart", null, -1);
-    setCookie("login", null, -1);
-    window.location = '/projects.html';
-  });
-  /* promena broja artikala u korpi  */ 
-  const dohvatiBrojArtikala = () => {
-    const cookies = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("cart="));
-
-    let cart = [];
-    if (cookies) {
-      cart = JSON.parse(cookies.split("=")[1]);
-    }
-
-    if (cart) {
-      document.getElementsByClassName('badge')[0].innerHTML = cart.length;
-    }
-  }
-  dohvatiBrojArtikala();
-
-  const parsirajLogin = () => {
-    const cookies = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("login="));
-
-    let loginInformacije;
-    if (cookies) {
-      loginInformacije = JSON.parse(cookies.split("=")[1]);
-    }
-
-    if (loginInformacije) {
-      document.getElementById('logOut').hidden = false;
-  
-      document.getElementById('badge1').innerHTML = 'Zdravo, ' + loginInformacije.ime + '!';
-    } else {
-      document.getElementById('logOut').hidden = true;
-    }
-  }
-  parsirajLogin();
-
-   /* ucitavanje proizvoda prilikom otvaranja stranice  */ 
+  /* ucitavanje proizvoda prilikom otvaranja stranice  */ 
   getData("kategorija.json", showCategorie);
   getData("izvodjaci.json", showArtists);
   getData("albumi.json", showAlbums);
     
   /* prazni nizovi koje kasnije popunjavamo */
-  
   let izvodjaci = [];
-  let albumi = [];
   let kategorija = [];
 
   /* Postavljeni osluskivaci za filter pretrage i sortiranje po ceni*/
-  
-  
   document.getElementById("sort1").addEventListener("change", filterChange);
   document.getElementById("searchProducts").addEventListener("search", filterChange);
   document.getElementById("searchProducts").addEventListener("keyup", filterChange);
   document.getElementById("sort3").addEventListener("change", filterChange);
   document.getElementById("sortcategory").addEventListener("change", filterChange);
-  
   
   /*Dohvatanje iz JSON-a  */
   function getData(file, callback) {
@@ -121,7 +70,7 @@ window.onload = () => {
           <h5> ${element.cena} RSD</h5>
         
           <p id="${element.id}" value="${element.naStanju}"> ${
-            element.naStanju ? "Proizvod je dostupna" : "Proizvod nema na stanju"
+            element.naStanju ? "Proizvod je dostupan" : "Proizvod nije na stanju"
           }</p>
           <p class="card-text">
                 ${catchCategory(element.kategorija)}
@@ -149,9 +98,6 @@ window.onload = () => {
 
   /*dohvatanje izvodjaca ime i prezime po  id-u */
   function catchArtistNameByID(id) {
-    console.log('problematicna fja, ID: ' + id);
-    console.log('svi izvodjaci: ');
-    console.log(izvodjaci);
     let izvodjaciI = izvodjaci.filter((obj) => obj.id == id);
     if (!izvodjaciI[0]) return '';
     let imeP = izvodjaciI[0].ime;
@@ -161,7 +107,6 @@ window.onload = () => {
   
   /*dohvatanje izvodjaca po id-u */
   function catchArtistByID(id) {
-    console.log( izvodjaci.filter((obj) => obj.id == id));
     return ( izvodjaci.filter((obj) => obj.id == id)[0]);
   }
 
@@ -255,6 +200,52 @@ window.onload = () => {
     }
     return [];
   }
+    
+  /*  sakriveno dugme za odjavljivanje */
+  logoutbutton = document.getElementById('logOut');
+  logoutbutton.addEventListener('click', () => {
+    setCookie("cart", null, -1); //pitaj
+    setCookie("login", null, -1);
+    window.location = '/projects.html';
+  });
+
+  /* promena broja artikala u korpi  */ 
+  const dohvatiBrojArtikala = () => {
+    const cookies = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("cart="));
+
+    let cart = [];
+    if (cookies) {
+      cart = JSON.parse(cookies.split("=")[1]);
+    }
+
+    if (cart) {
+      document.getElementsByClassName('badge')[0].innerHTML = cart.length;
+    }
+  }
+  dohvatiBrojArtikala();
+
+/* parsiranje logovanja*/
+  const parsirajLogin = () => {
+    const cookies = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("login="));
+
+    let loginInformacije;
+    if (cookies) {
+      loginInformacije = JSON.parse(cookies.split("=")[1]);
+    }
+
+    if (loginInformacije) {
+      document.getElementById('logOut').hidden = false;
+  
+      document.getElementById('badge1').innerHTML = 'Zdravo, ' + loginInformacije.ime + '!';
+    } else {
+      document.getElementById('logOut').hidden = true;
+    }
+  }
+  parsirajLogin();
   
   /* korpa */
   function addToBasket(button) {
@@ -300,6 +291,22 @@ window.onload = () => {
     today.setTime(today.getTime() + 1000 * 60 * 60 * 24 * exDays);
     document.cookie = name + "=" + value + "; " + "expires=" + today.toUTCString();
   }
+  /*kontakt forma na samom sajtu*/
+  let buttonForm = document.getElementById("buttonSend");
+  buttonForm.addEventListener("click",()=>{
+    let formIme = document.getElementById("name").value;
+    let formPrezime = document.getElementById("last").value;
+    let formEmail = document.getElementById("email").value;
+    let formMessage = document.getElementById("message").value;
+
+    if(formIme.length==0|| formPrezime.length==0 || formEmail.length==0 || formMessage.length==0 ){  
+      window.alert("Neispravan unos");
+      return;
+    };
+
+    window.alert("Poruka poslata");
+    window.location = '/projects.html';
+  });
 
   function filterChange() {
     getData("albumi.json",showAlbums);
